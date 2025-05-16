@@ -7,12 +7,9 @@ namespace Repositories.Concretes.Context
 {
     public class BaseDbContext : DbContext
     {
-        protected IConfiguration Configuration { get; set; }
-
-        public BaseDbContext(DbContextOptions dbContextOptions, IConfiguration configuration)
-            : base(dbContextOptions)
+        public BaseDbContext(DbContextOptions<BaseDbContext> options)
+            : base(options)
         {
-            Configuration = configuration;
         }
 
         // Veritabanı tabloları
@@ -20,13 +17,12 @@ namespace Repositories.Concretes.Context
         public DbSet<Blacklist> Blacklists { get; set; }
         public DbSet<Bootcamp> Bootcamps { get; set; }
 
-        // Model konfigürasyonlarını uygula
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Assembly içindeki IEntityTypeConfiguration'ları uygular
+            // Assembly içindeki IEntityTypeConfiguration implementasyonlarını uygular
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 
-            // Bütün ilişkilerde silme davranışını "Cascade" yapar
+            // Tüm ilişkilerde silme davranışı Cascade olacak şekilde ayarla
             foreach (var relationship in modelBuilder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys()))
             {
                 relationship.DeleteBehavior = DeleteBehavior.Cascade;

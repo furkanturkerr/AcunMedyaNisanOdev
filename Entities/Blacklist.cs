@@ -7,6 +7,6 @@
         public DateTime Date { get; set; }
         public int ApplicantId { get; set; }
 
-        public Aplication Aplication { get; set; }
+        public Application Aplication { get; set; }
     }
 }
