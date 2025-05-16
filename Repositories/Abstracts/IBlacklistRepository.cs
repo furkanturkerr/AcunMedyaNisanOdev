@@ -3,6 +3,6 @@ using Repositories.Interfaces;
 
 namespace Repositories.Abstracts;
 
-internal interface IBlacklistRepository : IAsyncRepository<Blacklist>
+public interface IBlacklistRepository : IAsyncRepository<Blacklist>
 {
 }

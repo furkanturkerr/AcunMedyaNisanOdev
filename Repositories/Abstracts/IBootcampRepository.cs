@@ -3,6 +3,6 @@ using Repositories.Interfaces;
 
 namespace Repositories.Abstracts;
 
-internal interface IBootcampRepository : IAsyncRepository<Bootcamp>
+public interface IBootcampRepository : IAsyncRepository<Bootcamp>
 {
 }
