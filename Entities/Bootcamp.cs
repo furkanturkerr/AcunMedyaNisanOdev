@@ -8,6 +8,7 @@ public class Bootcamp
     public DateTime EndDate { get; set; }
 
     public BootcampState BootcampState { get; set; }
+    public ICollection<Application> Applications { get; set; } = new List<Application>();
 }
 
 public enum BootcampState

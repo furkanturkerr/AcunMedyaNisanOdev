@@ -8,7 +8,20 @@ public class Application
     public ApplicationState ApplicationState { get; set; }
 
     public Bootcamp Bootcamp { get; set; }
+
+    public Application() { }
+
+    public Application(int ıd, int applicantId, int bootcampId, ApplicationState applicationState, Bootcamp bootcamp)
+    {
+        Id = ıd;
+        ApplicantId = applicantId;
+        BootcampId = bootcampId;
+        ApplicationState = applicationState;
+        Bootcamp = bootcamp;
+    }
 }
+
+
 
 public enum ApplicationState
 {

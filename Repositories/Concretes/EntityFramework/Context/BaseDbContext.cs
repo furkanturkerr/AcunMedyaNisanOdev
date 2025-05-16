@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System.Reflection;
 
-namespace Repositories.Concretes.Context
+namespace Repositories.Concretes.EntityFramework.Context
 {
     public class BaseDbContext : DbContext
     {

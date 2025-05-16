@@ -1,7 +1,7 @@
 ﻿using Core.Repositories.EntityFramework;
 using Entities;
 using Repositories.Abstracts;
-using Repositories.Concretes.Context;
+using Repositories.Concretes.EntityFramework.Context;
 
 
 
