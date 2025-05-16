@@ -3,10 +3,11 @@ using Business.DTOs.Requests;
 using Business.DTOs.Responses.Applicaton;
 using Repositories.Abstracts;
 using Entities;
+using Business.Abstaracts;
 
 namespace Business.Concretes;
 
-public class ApplicationManager
+public class ApplicationManager : IApplicationService
 {
     private readonly IApplicationRepository _applicationRepository;
 

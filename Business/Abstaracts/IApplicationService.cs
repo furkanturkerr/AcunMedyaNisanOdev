@@ -1,13 +1,13 @@
-﻿using Business.DTOs.Requests.Blacklist;
-using Business.DTOs.Responses.Blacklist;
-
+﻿using Business.DTOs.Requests;
+using Business.DTOs.Requests.Application;
+using Business.DTOs.Responses.Applicaton; 
 namespace Business.Abstaracts;
 
 public interface IApplicationService
 {
-    Task<List<GetAllBlacklistsResponse>> GetAllAsync();
-    Task<GetBlacklistResponse> GetByIdAsync(int id);
-    Task AddAsync(CreateBlacklistRequest request);
-    Task UpdateAsync(UpdateBlacklistRequest request);
-    Task DeleteAsync(DeleteBlacklistRequest request);
+    Task<List<GetAllApplicationsResponse>> GetAllAsync();
+    Task<GetApplicationResponse> GetByIdAsync(int id);
+    Task AddAsync(CreateApplicationRequest request);
+    Task UpdateAsync(UpdateApplicationRequest request);
+    Task DeleteAsync(DeleteApplicationRequest request);
 }

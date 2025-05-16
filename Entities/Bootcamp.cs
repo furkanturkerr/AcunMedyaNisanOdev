@@ -13,9 +13,9 @@ public class Bootcamp
 
 public enum BootcampState
 {
-    PREPARING, 
-    OPEN_FOR_APPLICATION, 
-    IN_PROGRESS, 
-    FINISHED, 
-    CANCELLED
+    PREPARING = 0, 
+    OPEN_FOR_APPLICATION = 1, 
+    IN_PROGRESS = 2, 
+    FINISHED = 3, 
+    CANCELLED = 4
 }

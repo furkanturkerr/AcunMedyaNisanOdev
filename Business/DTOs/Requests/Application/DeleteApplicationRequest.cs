@@ -3,5 +3,4 @@
 public class DeleteApplicationRequest
 {
     public int Id { get; set; }
-    public ApplicationState ApplicationState { get; set; }
 }
