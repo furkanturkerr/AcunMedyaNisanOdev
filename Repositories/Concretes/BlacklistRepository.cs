@@ -3,13 +3,11 @@ using Entities;
 using Repositories.Abstracts;
 using Repositories.Concretes.Context;
 
-
-
 namespace Repositories.Concretes;
 
-public class ApplicationRepository : EfRepositoryBase<Application, BaseDbContext>, IApplicationRepository
+public class BlacklistRepository : EfRepositoryBase<Blacklist, BaseDbContext>, IBlacklistRepository
 {
-    public ApplicationRepository(BaseDbContext context) : base(context)
+    public BlacklistRepository(BaseDbContext context) : base(context)
     {
     }
 }

@@ -3,13 +3,11 @@ using Entities;
 using Repositories.Abstracts;
 using Repositories.Concretes.Context;
 
-
-
 namespace Repositories.Concretes;
 
-public class ApplicationRepository : EfRepositoryBase<Application, BaseDbContext>, IApplicationRepository
+public class BootcampRepository : EfRepositoryBase<Bootcamp, BaseDbContext>, IBootcampRepository
 {
-    public ApplicationRepository(BaseDbContext context) : base(context)
+    public BootcampRepository(BaseDbContext context) : base(context)
     {
     }
 }

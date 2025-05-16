@@ -3,6 +3,6 @@ using Repositories.Interfaces;
 
 namespace Repositories.Abstracts;
 
-public interface IApplicationRepositories : IAsyncRepository<Application>
+public interface IApplicationRepository : IAsyncRepository<Application>
 {
 }
