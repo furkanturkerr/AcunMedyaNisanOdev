@@ -1,0 +1,6 @@
+@AcunMedyaNisanOdev_4_HostAddress = http://localhost:5034
+
+GET {{AcunMedyaNisanOdev_4_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
