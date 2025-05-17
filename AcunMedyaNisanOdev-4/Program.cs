@@ -1,6 +1,7 @@
 ﻿using Business.Abstaracts;
 using Business.Abstracts;
 using Business.Concretes;
+using Business.Profiles;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Repositories.Abstracts;
@@ -27,6 +28,13 @@ builder.Services.AddScoped<IBlacklistService, BlacklistManager>();
 builder.Services.AddScoped<IBootcampRepository, BootcampRepository>();
 builder.Services.AddScoped<IApplicationRepository, ApplicationRepository>();
 builder.Services.AddScoped<IBlacklistRepository, BlacklistRepository>();
+
+
+builder.Services.AddAutoMapper(typeof(BootcampProfile).Assembly);
+builder.Services.AddAutoMapper(typeof(ApplicationProfile).Assembly);
+builder.Services.AddAutoMapper(typeof(BlacklistProfile).Assembly);
+
+
 
 var app = builder.Build();
 

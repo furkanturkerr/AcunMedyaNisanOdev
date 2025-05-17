@@ -5,7 +5,7 @@ namespace Business.Abstracts;
 
 public interface IBlacklistService
 {
-    Task<List<GetBlacklistResponse>> GetAllAsync();
+    Task<List<GetAllBlacklistsResponse>> GetAllAsync();
     Task<GetBlacklistResponse> GetByIdAsync(int id);
     Task AddAsync(CreateBlacklistRequest request);
     Task UpdateAsync(UpdateBlacklistRequest request);
