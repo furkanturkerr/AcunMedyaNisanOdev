@@ -7,6 +7,8 @@ using Microsoft.EntityFrameworkCore;
 using Repositories.Abstracts;
 using Repositories.Concretes;
 using Repositories.Concretes.EntityFramework.Context;
+using Core.Exceptions.Extensions;
+using Business;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -34,9 +36,14 @@ builder.Services.AddAutoMapper(typeof(BootcampProfile).Assembly);
 builder.Services.AddAutoMapper(typeof(ApplicationProfile).Assembly);
 builder.Services.AddAutoMapper(typeof(BlacklistProfile).Assembly);
 
-
+builder.Services.AddBusinessServices();
+builder.Services.AddControllers();
 
 var app = builder.Build();
+
+app.UseCustomExceptionMiddleware();
+
+app.UseCustomExceptionMiddleware(); // Global Exception Middleware aktif
 
 // Swagger
 if (app.Environment.IsDevelopment())
